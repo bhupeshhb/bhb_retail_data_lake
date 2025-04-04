@@ -6,7 +6,6 @@ CREATE TABLE products (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-
 CREATE TABLE categories (
     category_id INT PRIMARY KEY,
     name VARCHAR(255),
