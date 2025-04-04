@@ -6,11 +6,13 @@ CREATE TABLE products (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+
 CREATE TABLE categories (
     category_id INT PRIMARY KEY,
     name VARCHAR(255),
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
@@ -18,6 +20,7 @@ CREATE TABLE customers (
     email VARCHAR(255),
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 
 CREATE TABLE orders (
     order_id INT PRIMARY KEY,
@@ -27,6 +30,7 @@ CREATE TABLE orders (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+
 CREATE TABLE order_items (
     order_item_id INT PRIMARY KEY,
     order_id INT,
@@ -35,6 +39,7 @@ CREATE TABLE order_items (
     price DECIMAL(10,2),
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 
 
 -- Insert into categories\
@@ -49,6 +54,7 @@ INSERT INTO categories (category_id, name) VALUES
     (8, 'Health & Beauty'),
     (9, 'Automotive'),
     (10, 'Grocery');
+
 
 -- Insert into products
 INSERT INTO products (product_id, name, category_id, price) VALUES
@@ -73,6 +79,7 @@ INSERT INTO products (product_id, name, category_id, price) VALUES
     (119, 'Engine Oil', 9, 45.00),
     (120, 'Coffee Beans', 10, 20.00);
 
+
 -- Insert into customers
 INSERT INTO customers (customer_id, name, email) VALUES
     (1, 'John Doe', 'john@example.com'),
@@ -86,6 +93,7 @@ INSERT INTO customers (customer_id, name, email) VALUES
     (9, 'James Martinez', 'james@example.com'),
     (10, 'Emma Hernandez', 'emma@example.com');
 
+
 -- Insert into orders
 INSERT INTO orders (order_id, customer_id, total_amount) VALUES
     (1001, 1, 1020.00),
@@ -98,6 +106,7 @@ INSERT INTO orders (order_id, customer_id, total_amount) VALUES
     (1008, 8, 75.00),
     (1009, 9, 120.00),
     (1010, 10, 90.00);
+
 
 -- Insert into order_items
 INSERT INTO order_items (order_item_id, order_id, product_id, quantity, price) VALUES
