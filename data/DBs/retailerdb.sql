@@ -13,7 +13,6 @@ CREATE TABLE categories (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     name VARCHAR(255),
